@@ -1,3 +1,4 @@
+import Prelude hiding (seq)
 import Control.Monad
 import Data.Array.IO
 import Data.Bits
@@ -9,7 +10,7 @@ ints = map (read :: String -> Int) . words
 
 main :: IO ()
 main = do
-    [n, q] <- ints <$> getLine :: IO [Int]
+    [n, _] <- ints <$> getLine :: IO [Int]
     qs <- (map ints . lines) <$> getContents :: IO [[Int]]
     seqList <- newListArray (0, n - 1) $ replicate n empty :: IO (IOArray Int (Seq Int))
     lastAnswer <- newIORef 0
