@@ -19,4 +19,3 @@ main = do
     replicateM_ q $ do
         s <- getLine
         print $ Map.findWithDefault 0 s mp
-        return ()
