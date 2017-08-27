@@ -1,0 +1,1 @@
+With the aim of improving my Haskell-fu, I undertook to solve all of [HackerRank's Data Structures](https://www.hackerrank.com/domains/data-structures/) track problems. My focus is on mastering mutable state and thus most solutions are imperative in style.
