@@ -5,16 +5,14 @@ module Tests (main) where
     import Test.Utils
     
     main :: IO ()
-    main = do
-        defaultMain $ testGroup "Tests" [
-            goldenVsSample
-                "Arrays/ArrayManipulation/input_sample.txt"
-                "Arrays/ArrayManipulation/output_sample.txt"
-                Main.main,
-            goldenVsSample
-                "Arrays/ArrayManipulation/input07.txt"
-                "Arrays/ArrayManipulation/output07.txt"
-                Main.main
-            ]
-        return ()
+    main = defaultMain $ testGroup "Tests" [
+        goldenVsSample
+            "ArrayManipulation/input_sample.txt"
+            "ArrayManipulation/output_sample.txt"
+            Main.main,
+        goldenVsSample
+            "ArrayManipulation/input07.txt"
+            "ArrayManipulation/output07.txt"
+            Main.main
+        ]
     

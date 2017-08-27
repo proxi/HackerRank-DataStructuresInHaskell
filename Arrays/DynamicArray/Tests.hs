@@ -7,11 +7,11 @@ import Test.Utils
 main :: IO ()
 main = defaultMain $ testGroup "Tests" [
     goldenVsSample
-        "Arrays/DynamicArray/input_sample.txt"
-        "Arrays/DynamicArray/output_sample.txt"
+        "DynamicArray/input_sample.txt"
+        "DynamicArray/output_sample.txt"
         Main.main
     , goldenVsSample
-        "Arrays/DynamicArray/input00.txt"
-        "Arrays/DynamicArray/output00.txt"
+        "DynamicArray/input00.txt"
+        "DynamicArray/output00.txt"
         Main.main
     ]

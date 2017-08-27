@@ -1,10 +1,10 @@
-name:                DataStructures
+name:                Arrays
 version:             0.1.0.0
 build-type:          Simple
 cabal-version:       >=1.10
 
 executable ArraysDS
-  hs-source-dirs:      Arrays/ArraysDS
+  hs-source-dirs:      ArraysDS
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   main-is:             Main.hs
   build-depends:       base,
@@ -12,7 +12,7 @@ executable ArraysDS
   default-language:    Haskell2010
 
 test-suite ArraysDSTests
-  hs-source-dirs:      . Arrays/ArraysDS
+  hs-source-dirs:      ArraysDS
   type:                exitcode-stdio-1.0
   main-is:             Tests.hs
   ghc-options:         -main-is Tests
@@ -21,12 +21,13 @@ test-suite ArraysDSTests
                        silently,
                        tasty,
                        tasty-golden,
-                       bytestring
+                       bytestring,
+                       Test-Utils
   default-language:    Haskell2010
-  other-modules:       Main Test.Utils
+  other-modules:       Main
 
 executable 2DArrayDS
-  hs-source-dirs:      Arrays/2DArrayDS
+  hs-source-dirs:      2DArrayDS
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   main-is:             Main.hs
   build-depends:       base,
@@ -34,7 +35,7 @@ executable 2DArrayDS
   default-language:    Haskell2010
 
 test-suite 2DArrayDSTests
-  hs-source-dirs:      . Arrays/2DArrayDS
+  hs-source-dirs:      2DArrayDS
   type:                exitcode-stdio-1.0
   main-is:             Tests.hs
   ghc-options:         -main-is Tests
@@ -43,12 +44,13 @@ test-suite 2DArrayDSTests
                        silently,
                        tasty,
                        tasty-golden,
-                       bytestring
+                       bytestring,
+                       Test-Utils
   default-language:    Haskell2010
-  other-modules:       Main Test.Utils
+  other-modules:       Main
 
 executable DynamicArray
-  hs-source-dirs:      Arrays/DynamicArray
+  hs-source-dirs:      DynamicArray
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   main-is:             Main.hs
   build-depends:       base,
@@ -57,7 +59,7 @@ executable DynamicArray
   default-language:    Haskell2010
 
 test-suite DynamicArrayTests
-  hs-source-dirs:      . Arrays/DynamicArray
+  hs-source-dirs:      DynamicArray
   type:                exitcode-stdio-1.0
   main-is:             Tests.hs
   ghc-options:         -main-is Tests
@@ -67,12 +69,13 @@ test-suite DynamicArrayTests
                        tasty,
                        tasty-golden,
                        bytestring,
-                       containers
+                       containers,
+                       Test-Utils
   default-language:    Haskell2010
-  other-modules:       Main Test.Utils
+  other-modules:       Main
 
 executable LeftRotation
-  hs-source-dirs:      Arrays/LeftRotation
+  hs-source-dirs:      LeftRotation
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   main-is:             Main.hs
   build-depends:       base,
@@ -81,7 +84,7 @@ executable LeftRotation
   default-language:    Haskell2010
 
 test-suite LeftRotationTests
-  hs-source-dirs:      . Arrays/LeftRotation
+  hs-source-dirs:      LeftRotation
   type:                exitcode-stdio-1.0
   main-is:             Tests.hs
   ghc-options:         -main-is Tests
@@ -91,12 +94,13 @@ test-suite LeftRotationTests
                        tasty,
                        tasty-golden,
                        bytestring,
-                       containers
+                       containers,
+                       Test-Utils                       
   default-language:    Haskell2010
-  other-modules:       Main Test.Utils
+  other-modules:       Main
 
 executable SparseArrays
-  hs-source-dirs:      Arrays/SparseArrays
+  hs-source-dirs:      SparseArrays
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   main-is:             Main.hs
   build-depends:       base,
@@ -106,7 +110,7 @@ executable SparseArrays
   default-language:    Haskell2010
 
 test-suite SparseArraysTests
-  hs-source-dirs:      . Arrays/SparseArrays
+  hs-source-dirs:      SparseArrays
   type:                exitcode-stdio-1.0
   main-is:             Tests.hs
   ghc-options:         -main-is Tests
@@ -117,12 +121,13 @@ test-suite SparseArraysTests
                        tasty-golden,
                        bytestring,
                        containers,
-                       mtl
+                       mtl,
+                       Test-Utils                       
   default-language:    Haskell2010
-  other-modules:       Main Test.Utils
+  other-modules:       Main
 
 executable ArrayManipulation
-  hs-source-dirs:      Arrays/ArrayManipulation
+  hs-source-dirs:      ArrayManipulation
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   main-is:             Main.hs
   build-depends:       base,
@@ -133,7 +138,7 @@ executable ArrayManipulation
   default-language:    Haskell2010
 
 test-suite ArrayManipulationTests
-  hs-source-dirs:      . Arrays/ArrayManipulation
+  hs-source-dirs:      ArrayManipulation
   type:                exitcode-stdio-1.0
   main-is:             Tests.hs
   ghc-options:         -main-is Tests
@@ -144,6 +149,7 @@ test-suite ArrayManipulationTests
                        tasty-golden,
                        bytestring,
                        containers,
-                       mtl
+                       mtl,
+                       Test-Utils
   default-language:    Haskell2010
-  other-modules:       Main Test.Utils
+  other-modules:       Main

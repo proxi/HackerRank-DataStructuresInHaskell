@@ -7,8 +7,8 @@ module Tests (main) where
     main :: IO ()
     main = defaultMain $ testGroup "Tests" [
         goldenVsSample
-            "Arrays/SparseArrays/input_sample.txt"
-            "Arrays/SparseArrays/output_sample.txt"
+            "SparseArrays/input_sample.txt"
+            "SparseArrays/output_sample.txt"
             Main.main
         ]
     

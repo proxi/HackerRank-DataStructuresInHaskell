@@ -7,7 +7,7 @@ import Test.Utils
 main :: IO ()
 main = defaultMain $ testGroup "Tests" [
     goldenVsSample
-        "Arrays/LeftRotation/input_sample.txt"
-        "Arrays/LeftRotation/output_sample.txt"
+        "LeftRotation/input_sample.txt"
+        "LeftRotation/output_sample.txt"
         Main.main
     ]

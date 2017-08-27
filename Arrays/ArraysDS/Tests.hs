@@ -5,6 +5,9 @@ import Test.Tasty
 import Test.Utils
 
 main :: IO ()
-main = do
-    defaultMain $ goldenVsSample "Arrays/ArraysDS/input_sample.txt" "Arrays/ArraysDS/output_sample.txt" Main.main
-    return ()
+main = defaultMain $ testGroup "Tests" [
+    goldenVsSample
+        "ArraysDS/input_sample.txt"
+        "ArraysDS/output_sample.txt"
+        Main.main
+    ]
