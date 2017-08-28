@@ -20,8 +20,7 @@ main :: IO ()
 main = do
     n <- readLn
     lrs <- replicateM n $ (\[l, r] -> (l, r)) . map read . words <$> getLine :: IO [(Int, Int)]
-    let treeMap = Map.fromList [(a, (l, r)) | (a, (l, r)) <- zip [1..n] lrs]
-    let tree = fromMap treeMap
+    let tree = fromMap $ Map.fromList [(a, (l, r)) | (a, (l, r)) <- zip [1..n] lrs]
 
     q <- readLn
     ks <- replicateM q readLn :: IO [Int]
