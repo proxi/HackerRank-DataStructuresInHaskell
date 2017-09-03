@@ -38,6 +38,7 @@ resolver: lts-8.21
 packages:
 - Arrays
 - Trees
+- Stacks
 - location: Test
   extra-dep: true
 # Dependency packages to be pulled from upstream that are not in the resolver
