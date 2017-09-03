@@ -17,10 +17,10 @@ max (StackImpl ((_, mx):_)) = mx
 
 main :: IO ()
 main = do
-    n <- readLn :: IO Int
+    n <- readLn
     qs <- replicateM n $ map read . words <$> getLine :: IO [[Int]]
     foldM_ (\s q -> case q of
-            [1, x] -> return (push s x)
+            [1, x] -> return $ push s x
             [2]    -> return $ snd $ pop s
-            [3]    -> do { print (Main.max s); return s }
+            [3]    -> print (Main.max s) >> return s
         ) empty qs
