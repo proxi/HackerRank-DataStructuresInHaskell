@@ -19,3 +19,20 @@ test-suite MaximumElementTests
                        tasty, Test-Utils
   default-language:    Haskell2010
   other-modules:       Main
+
+executable BalancedBrackets
+  hs-source-dirs:      BalancedBrackets
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  main-is:             Main.hs
+  build-depends:       base, array
+  default-language:    Haskell2010
+
+test-suite BalancedBracketsTests
+  hs-source-dirs:      BalancedBrackets
+  type:                exitcode-stdio-1.0
+  main-is:             Tests.hs
+  ghc-options:         -main-is Tests
+  build-depends:       base, array,
+                       tasty, Test-Utils
+  default-language:    Haskell2010
+  other-modules:       Main
