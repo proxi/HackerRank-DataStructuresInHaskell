@@ -1,23 +1,20 @@
 import Control.Monad
 
+invert :: Char -> Char
+invert ')' = '('
+invert '}' = '{'
+invert ']' = '['
+
 isBalanced :: String -> Bool
-isBalanced s = balance s [] where
+isBalanced xs' = balance xs' [] where
     balance [] [] = True
     balance [] _ = False
-    balance (x:xs) ss = case x of
-        '(' -> balance xs (x:ss)
-        '{' -> balance xs (x:ss)
-        '[' -> balance xs (x:ss)
-        ')' -> case ss of
-            '(':ss -> balance xs ss
-            _ -> False
-        '}' -> case ss of
-            '{':ss -> balance xs ss
-            _ -> False
-        ']' -> case ss of
-            '[':ss -> balance xs ss
-            _ -> False
-            
+    balance (x:xs) [] | x `elem` "({[" = balance xs [x]
+                      | otherwise = False
+    balance (x:xs) (s:ss) | x `elem` "({[" = balance xs (x:s:ss)
+                          | invert x == s = balance xs ss
+                          | otherwise = False
+
 main :: IO ()
 main = do
     n <- readLn
